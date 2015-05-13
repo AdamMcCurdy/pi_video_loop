@@ -2,7 +2,7 @@
  * Created by Adam on 5/13/15.
  */
 var omx = require('omxdirector');
-var secondsToWait = 30;
+var secondsToWait = 10;
 var moviePlaying = "madmax.mp4";
 
 

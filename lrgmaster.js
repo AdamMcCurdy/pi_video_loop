@@ -3,20 +3,23 @@
  */
 var omx = require('omxdirector');
 var secondsToWait = 30;
-var moviePlaying = "madmax";
+var moviePlaying = "madmax.mp4";
 
+
+function playMovie(filename){
+    omx.on('stop', function(){
+        omx.start('filename', {loop: true});
+    });
+    moviePlaying = filename;
+}
 setInterval(function() {
- 	if(moviePlaying == 'madmax'){
-		//omx play movie in ping pong fashion
-		omx.stop();
-		omx.start('avengers.mp4', {loop: true});
-       		moviePlaying = 'avengers';
-		//send signal to other pi about playing next movie
-	}
-	else if(moviePlaying == 'avengers'){
-		omx.stop();
-		omx.start('madmax.mp4', {loop: true});
-		moviePlaying = 'madmax';
-	}
+        if(moviePlaying == 'madmax.mp4'){
+            //omx play movie in ping pong fashion
+            playMovie('avengers.mp4');
+            //send signal to other pi about playing next movie
+        }
+        else if(moviePlaying == 'avengers'){
+            playMovie('madmax.mp4');
+        }
     }, secondsToWait * 1000
-)
+);

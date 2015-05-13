@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0acb24fa-5e97-4aad-aa8c-ea6eab66f688" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lrgmaster.js" afterPath="$PROJECT_DIR$/lrgmaster.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LRGWall.iws" />
@@ -284,7 +283,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431542881423</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Updated to callback structure for player">
+      <created>1431543030383</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1431543030383</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">

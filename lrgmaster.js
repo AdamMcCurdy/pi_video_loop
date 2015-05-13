@@ -14,8 +14,6 @@ function playMovie(filename){
     moviePlaying = filename;
 }
 
-omx.play(moviePlaying, {loop: true});
-
 setInterval(function() {
         if(moviePlaying == 'madmax.mp4'){
             //omx play movie in ping pong fashion

@@ -7,8 +7,10 @@ var moviePlaying = "madmax.mp4";
 
 
 function playMovie(filename){
-    omx.stop();
-    omx.play(filename, {loop: true});
+    omx.stop(function(){
+        omx.play(filename, {loop: true});
+    });
+
     moviePlaying = filename;
 }
 
@@ -18,7 +20,7 @@ setInterval(function() {
             playMovie('avengers.mp4');
             //send signal to other pi about playing next movie
         }
-        else if(moviePlaying == 'avengers'){
+        else if(moviePlaying == 'avengers.mp4'){
             playMovie('madmax.mp4');
         }
     }, secondsToWait * 1000

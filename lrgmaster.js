@@ -7,10 +7,10 @@ var moviePlaying = "madmax.mp4";
 
 
 function playMovie(filename){
-    omx.stop();
-    setTimeout(function(){
+    omx.stop(function(){
         omx.play(filename, {loop: true});
-    }, 500);
+    });
+
     moviePlaying = filename;
 }
 

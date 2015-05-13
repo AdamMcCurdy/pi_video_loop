@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0acb24fa-5e97-4aad-aa8c-ea6eab66f688" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lrgmaster.js" afterPath="$PROJECT_DIR$/lrgmaster.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LRGWall.iws" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="lrgmaster.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lrgmaster.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40268457">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.35234898">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="e#0#38#0" expanded="false" />
               </folding>
@@ -314,7 +313,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431543405100</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Updated to callback structure for player">
+      <created>1431543521383</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1431543521383</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -413,8 +418,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lrgmaster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40268457">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.35234898">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="e#0#38#0" expanded="false" />
           </folding>

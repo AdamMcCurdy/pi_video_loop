@@ -27,8 +27,8 @@
       <file leaf-file-name="lrgmaster.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lrgmaster.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25167784">
-              <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.40268457">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="e#0#38#0" expanded="false" />
               </folding>
@@ -308,7 +308,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431543316307</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Updated to callback structure for player">
+      <created>1431543405100</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1431543405100</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -407,8 +413,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lrgmaster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25167784">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.40268457">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="e#0#38#0" expanded="false" />
           </folding>

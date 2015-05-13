@@ -2,7 +2,7 @@
  * Created by Adam on 5/13/15.
  */
 var omx = require('omxdirector');
-var secondsToWait = 10;
+var secondsToWait = 30;
 var moviePlaying = "madmax.mp4";
 
 
@@ -14,6 +14,8 @@ function playMovie(filename){
 
     moviePlaying = filename;
 }
+
+playMovie(moviePlaying);
 
 setInterval(function() {
         if(moviePlaying == 'madmax.mp4'){

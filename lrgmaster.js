@@ -15,7 +15,7 @@ function playMovie(filename){
     omx.stop();
     setTimeout(function(){
         omx.play(filename, {loop: true});
-    }, 500);
+    }, 10);
 
     moviePlaying = filename;
 }

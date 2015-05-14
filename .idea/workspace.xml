@@ -27,8 +27,8 @@
       <file leaf-file-name="lrgmaster.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lrgmaster.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60199004">
-              <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.7761194">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
                 <element signature="e#0#38#0" expanded="false" />
               </folding>
@@ -411,7 +411,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431636401798</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Updated serial port monitoring">
+      <created>1431636457470</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1431636457470</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -512,8 +518,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lrgmaster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60199004">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.7761194">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
             <element signature="e#0#38#0" expanded="false" />
           </folding>

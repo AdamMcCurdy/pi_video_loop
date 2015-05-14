@@ -27,7 +27,7 @@ serialPort.on("open", function () {
     serialPort.on('data', function(data) {
         data = data.toString().split('R')[1];
         if(data > 299){
-            console.log('data received: ' + data);
+            console.log("");
             if(data < 1500 && moviePlaying == 'farClip.mp4'){
                 //omx play movie in ping pong fashion
                 playMovie('nearClip.mp4');

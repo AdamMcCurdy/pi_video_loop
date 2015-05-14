@@ -45,6 +45,9 @@ serialPort.on("open", function () {
                     playMovie('nearClip.mp4');
                     //send signal to other pi about playing next movie
             }
+            else if(data > 1500 && moviePlaying == 'nearClip'){
+                playMovie('farClip.mp4');
+            }
         }
     });
 });

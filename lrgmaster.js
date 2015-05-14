@@ -34,6 +34,7 @@ serialPort.on("open", function () {
                     //send signal to other pi about playing next movie
             }
             if(data > 1500 && moviePlaying == 'nearClip'){
+                console.log('Trying to play far clip');
                 playMovie('farClip.mp4');
             }
         }

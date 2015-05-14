@@ -13,9 +13,7 @@ var serialPort = new SerialPort("/dev/ttyUSB0", { //pi version
 
 function playMovie(filename){
     omx.stop();
-    setTimeout(function(){
-        omx.play(filename, {loop: true});
-    }, 10);
+    omx.play(filename, {loop: true});
 
     moviePlaying = filename;
 }

@@ -2,6 +2,7 @@
   "name": "application-name",
   "version": "0.0.1",
   "dependencies": {
-    "omxdirector": "^0.1.1"
+    "omxdirector": "^0.1.1",
+    "serialport": "^1.7.1"
   }
 }

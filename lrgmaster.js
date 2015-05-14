@@ -1,9 +1,11 @@
 /**
  * Created by Adam on 5/13/15.
  */
-var omx = require('omxdirector');
-var secondsToWait = 30;
-var moviePlaying = "madmax.mp4";
+var omx = require('omxdirector')
+ //, secondsToWait = 30
+ , moviePlaying = 'madmax.mp4'
+ , SerialPort = require('serialport').SerialPort
+ , serialPort = new SerialPort("/dev/ttyUSB0", {baudrate: 57600});
 
 
 function playMovie(filename){
@@ -17,14 +19,24 @@ function playMovie(filename){
 
 playMovie(moviePlaying);
 
+//setInterval(function() {
+//        if(moviePlaying == 'madmax.mp4'){
+//            //omx play movie in ping pong fashion
+//            playMovie('avengers.mp4');
+//            //send signal to other pi about playing next movie
+//        }
+//        else if(moviePlaying == 'avengers.mp4'){
+//            playMovie('madmax.mp4');
+//        }
+//    }, secondsToWait * 1000
+//);
+
 setInterval(function() {
-        if(moviePlaying == 'madmax.mp4'){
-            //omx play movie in ping pong fashion
-            playMovie('avengers.mp4');
-            //send signal to other pi about playing next movie
-        }
-        else if(moviePlaying == 'avengers.mp4'){
-            playMovie('madmax.mp4');
-        }
-    }, secondsToWait * 1000
+    serialPort.on("open", function () {
+        console.log('open');
+        serialPort.on('data', function (data) {
+            console.log('data received: ' + data);
+        });
+    });
+    }, .5 * 1000
 );

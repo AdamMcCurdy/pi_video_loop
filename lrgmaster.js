@@ -3,10 +3,12 @@
  */
 var omx = require('omxdirector')
  //, secondsToWait = 30
- , moviePlaying = 'madmax.mp4'
- , SerialPort = require('serialport').SerialPort
- , serialPort = new SerialPort("/dev/ttyUSB0", {baudrate: 57600});
+ , moviePlaying = 'madmax.mp4';
 
+var SerialPort = require("serialport").SerialPort;
+var serialPort = new SerialPort("/dev/ttyUSB0", {
+    baudrate: 57600
+});
 
 function playMovie(filename){
     omx.stop();
@@ -31,12 +33,9 @@ playMovie(moviePlaying);
 //    }, secondsToWait * 1000
 //);
 
-setInterval(function() {
-    serialPort.on("open", function () {
-        console.log('open');
-        serialPort.on('data', function (data) {
-            console.log('data received: ' + data);
-        });
+serialPort.on("open", function () {
+    console.log('open');
+    serialPort.on('data', function(data) {
+        console.log('data received: ' + data);
     });
-    }, .5 * 1000
-);
+});

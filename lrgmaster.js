@@ -6,7 +6,8 @@ var omx = require('omxdirector')
  , moviePlaying = 'farClip.mp4';
 
 var SerialPort = require("serialport").SerialPort;
-var serialPort = new SerialPort("/dev/tty.usbserial-MBY0W0XV", {
+//var serialPort = new SerialPort("/dev/tty.usbserial-MBY0W0XV", { // mac version
+var serialPort = new SerialPort("/dev/ttyUSB0", { //pi version
     baudrate: 57600
 });
 

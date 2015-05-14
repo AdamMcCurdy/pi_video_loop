@@ -29,11 +29,11 @@ serialPort.on("open", function () {
         if(data > 299){
             console.log('data received: ' + data);
             if(data < 1500 && moviePlaying == 'farClip.mp4'){
-                    //omx play movie in ping pong fashion
-                    playMovie('nearClip.mp4');
-                    //send signal to other pi about playing next movie
+                //omx play movie in ping pong fashion
+                playMovie('nearClip.mp4');
+                //send signal to other pi about playing next movie
             }
-            if(data > 1500 && moviePlaying == 'nearClip'){
+            if(data > 1500 && moviePlaying == 'nearClip.mp4'){
                 console.log('Trying to play far clip');
                 playMovie('farClip.mp4');
             }

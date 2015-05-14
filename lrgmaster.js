@@ -22,18 +22,6 @@ function playMovie(filename){
 console.log("Playing " + moviePlaying);
 playMovie(moviePlaying);
 
-//setInterval(function() {
-//        if(moviePlaying == 'madmax.mp4'){
-//            //omx play movie in ping pong fashion
-//            playMovie('avengers.mp4');
-//            //send signal to other pi about playing next movie
-//        }
-//        else if(moviePlaying == 'avengers.mp4'){
-//            playMovie('madmax.mp4');
-//        }
-//    }, secondsToWait * 1000
-//);
-
 serialPort.on("open", function () {
     console.log('open');
     serialPort.on('data', function(data) {
@@ -45,7 +33,7 @@ serialPort.on("open", function () {
                     playMovie('nearClip.mp4');
                     //send signal to other pi about playing next movie
             }
-            else if(data > 1500 && moviePlaying == 'nearClip'){
+            if(data > 1500 && moviePlaying == 'nearClip'){
                 playMovie('farClip.mp4');
             }
         }

@@ -3,10 +3,10 @@
  */
 var omx = require('omxdirector')
  //, secondsToWait = 30
- , moviePlaying = 'madmax.mp4';
+ , moviePlaying = 'farClip.mp4';
 
 var SerialPort = require("serialport").SerialPort;
-var serialPort = new SerialPort("/dev/ttyUSB0", {
+var serialPort = new SerialPort("/dev/tty.usbserial-MBY0W0XV", {
     baudrate: 57600
 });
 
@@ -36,6 +36,16 @@ playMovie(moviePlaying);
 serialPort.on("open", function () {
     console.log('open');
     serialPort.on('data', function(data) {
-        console.log('data received: ' + data);
+        data = data.toString().split('R')[1];
+        if(data > 299){
+            console.log('data received: ' + data/1000);
+            if(data < 1.5){
+                if(moviePlaying == 'farClip.mp4') {
+                    //omx play movie in ping pong fashion
+                    playMovie('nearClip.mp4');
+                    //send signal to other pi about playing next movie
+                }
+            }
+        }
     });
 });

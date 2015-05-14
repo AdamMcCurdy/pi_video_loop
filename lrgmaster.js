@@ -19,7 +19,7 @@ function playMovie(filename){
 
     moviePlaying = filename;
 }
-
+console.log("Playing " + moviePlaying);
 playMovie(moviePlaying);
 
 //setInterval(function() {
@@ -40,12 +40,10 @@ serialPort.on("open", function () {
         data = data.toString().split('R')[1];
         if(data > 299){
             console.log('data received: ' + data/1000);
-            if(data < 1.5){
-                if(moviePlaying == 'farClip.mp4') {
+            if(data < 1.5 && moviePlaying == 'farClip.mp4'){
                     //omx play movie in ping pong fashion
                     playMovie('nearClip.mp4');
                     //send signal to other pi about playing next movie
-                }
             }
         }
     });

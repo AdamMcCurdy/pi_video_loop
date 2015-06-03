@@ -8,7 +8,7 @@ var omx = require('omxdirector')
     , triggered = false
     , triggeredTime = 0
     , moviePlaying = 'trigger.mp4'
-    , minSensorRange = 299
+    , minSensorRange = 501
     , maxSensorRange = 3000;
 
 var SerialPort = require("serialport").SerialPort;

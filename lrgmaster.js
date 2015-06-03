@@ -1,7 +1,7 @@
 /**
  * Created by Adam on 5/13/15.
  */
-var omx = require('omxdirector').enableNativeLoop()
+var omx = require('omxdirector')
     , time = require('time')
     , timeToTrigger = 30
     , lastReading = 5000

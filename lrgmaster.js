@@ -11,6 +11,7 @@ var omx = require('omxdirector')
     , avgData = []
     , sampleSize = 25
     , sensorMin = 299
+    , maxSensorRange = 5000
     , startDevices = [];
 
 var SerialPort = require("serialport").SerialPort;
@@ -24,7 +25,7 @@ setInterval(checkUSBReading, 500);
 
 function checkUSBReading(){
     //check reading and also whether movie already playing
-    if(lastReading < 1500 && triggered == false){
+    if(lastReading < maxSensorRange && triggered == false){
 
         //checking to see if current time is under 30 seconds
         if(time.time() - triggeredTime > timeToTrigger){
@@ -50,16 +51,17 @@ function checkUSBReading(){
     }
 }
 
-function sampleUSBReading(){
-    lastReading = Math.round(Math.random() * 5000);
-    console.log(lastReading);
-}
-function loadMoviesFromDir(usbPath){
+//function sampleUSBReading(){
+//    lastReading = Math.round(Math.random() * 5000);
+//    console.log(lastReading);
+//}
 
-}
-function inventoryUSBDevices(){
-
-}
+//function loadMoviesFromDir(usbPath){
+//
+//}
+//function inventoryUSBDevices(){
+//
+//}
 
 function playMovie(filename){
     omx.stop();

@@ -12,7 +12,7 @@ var omx = require('omxdirector').enableNativeLoop()
     , maxSensorRange = 3000;
 
 var SerialPort = require("serialport").SerialPort;
-var serialPort = new SerialPort("/dev/ttyUSB1", { //pi version
+var serialPort = new SerialPort("/dev/ttyUSB0", { //pi version
     baudrate: 57600
 });
 
@@ -45,14 +45,15 @@ function checkUSBReading(){
     }
 }
 
+omx.on('stop', function(){
+    omx.play(moviePlaying, {loop:true});
+})
+
 function playMovie(filename){
     omx.stop();
-    //omx.on('stop', function(){
-    //    omx.play(filename, {loop:true});
-    //})
-    setTimeout(function(){
-        omx.play(filename, {loop: true});
-    }, 500);
+    //setTimeout(function(){
+    //    omx.play(filename, {loop: true});
+    //}, 500);
 
     moviePlaying = filename;
 }

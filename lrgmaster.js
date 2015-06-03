@@ -11,7 +11,7 @@ var omx = require('omxdirector')
     , avgData = []
     , sampleSize = 25
     , sensorMin = 299
-    , maxSensorRange = 5000
+    , maxSensorRange = 3000
     , startDevices = [];
 
 var SerialPort = require("serialport").SerialPort;
@@ -71,28 +71,31 @@ function playMovie(filename){
 
     moviePlaying = filename;
 }
-//console.log("Playing " + moviePlaying);
 
-playMovie(moviePlaying);
+function init(){
+    playMovie("trigger.mp4");
+    triggered = false;
+
+}
 
 serialPort.on("open", function () {
     //console.log('open');
     serialPort.on('data', function(data) {
         data = data.toString().split('R')[1];
         if(data > sensorMin){
-            if(avgData.length >= sampleSize){
-                //console.log("removing data");
-                avgData.shift();
-            }
-            avgData.push(data);
-            var sum = 0;
-            for(var x = 0; x < avgData.length; x++){
-                sum = sum + parseInt(avgData[x]);
-            }
-
-            var average = sum / avgData.length;
-            average = Math.round(average);
-            lastReading = average;
+            //if(avgData.length >= sampleSize){
+            //    //console.log("removing data");
+            //    avgData.shift();
+            //}
+            //avgData.push(data);
+            //var sum = 0;
+            //for(var x = 0; x < avgData.length; x++){
+            //    sum = sum + parseInt(avgData[x]);
+            //}
+            //
+            //var average = sum / avgData.length;
+            //average = Math.round(average);
+            lastReading = data;
             //console.log(average);
             //console.log(data);
             //if(data < 1500 && moviePlaying == 'main.mp4'){
@@ -106,3 +109,5 @@ serialPort.on("open", function () {
         }
     });
 });
+
+init();

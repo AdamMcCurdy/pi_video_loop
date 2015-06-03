@@ -73,7 +73,7 @@ function playMovie(filename){
 }
 
 function init(){
-    playMovie("trigger.mp4");
+    playMovie("attract.mp4");
     triggered = false;
 
 }

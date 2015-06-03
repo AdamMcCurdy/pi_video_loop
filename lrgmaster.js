@@ -69,7 +69,10 @@ serialPort.on("open", function () {
     });
 });
 
-console.log(usb.getDeviceList());
+var devices = usb.getDeviceList();
+devices.forEach(function(err, item){
+    console.log(item.deviceAddress);
+})
 
 init();
 

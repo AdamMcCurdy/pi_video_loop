@@ -2,7 +2,6 @@
  * Created by Adam on 5/13/15.
  */
 var omx = require('omxdirector')
-    , usb = require('usb')
     , time = require('time')
     , timeToTrigger = 30
     , lastReading = 0
@@ -29,6 +28,7 @@ function checkUSBReading(){
 
         //checking to see if current time is under 30 seconds
         if(time.time() - triggeredTime > timeToTrigger){
+            playMovie("trigger.mp4");
             console.log("Triggered");
             triggeredTime = time.time();
             console.log("Time = " + triggeredTime);
@@ -39,17 +39,14 @@ function checkUSBReading(){
         }
 
     }
-    //else if(lastReading > 4500){
-    //    triggered = false;
-    //    console.log("trigger reset");
-    //}
     else{
-        console.log(lastReading);
+        //console.log(lastReading);
     }
 
     if(time.time() - triggeredTime > timeToTrigger && triggered == true){
         triggered = false;
         console.log("Trigger reset");
+        playMovie("attract.mp4");
     }
 }
 

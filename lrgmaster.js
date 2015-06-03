@@ -1,18 +1,15 @@
 /**
  * Created by Adam on 5/13/15.
  */
-var omx = require('omxdirector')
+var omx = require('omxdirector').enableNativeLoop()
     , time = require('time')
     , timeToTrigger = 30
-    , lastReading = 0
+    , lastReading = 5000
     , triggered = false
     , triggeredTime = 0
     , moviePlaying = 'trigger.mp4'
-    , avgData = []
-    , sampleSize = 25
     , sensorMin = 299
-    , maxSensorRange = 3000
-    , startDevices = [];
+    , maxSensorRange = 3000;
 
 var SerialPort = require("serialport").SerialPort;
 //var serialPort = new SerialPort("/dev/tty.usbserial-MBY0W12V", { // mac version
@@ -41,7 +38,7 @@ function checkUSBReading(){
 
     }
     else{
-        //console.log(lastReading);
+        console.log(lastReading);
     }
 
     if(time.time() - triggeredTime > timeToTrigger && triggered == true){

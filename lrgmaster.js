@@ -18,7 +18,7 @@ var   omx = require('omxdirector')
 
 var port = require("serialport");
 var SerialPort = port.SerialPort;
-var serialPort = new SerialPort("/dev/ttyUSB1", { //pi version
+var serialPort = new SerialPort("/dev/ttyUSB0", { //pi version
     baudrate: 57600
 });
 

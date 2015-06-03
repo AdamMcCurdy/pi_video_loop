@@ -4,6 +4,7 @@
   "dependencies": {
     "omxdirector": "^0.1.1",
     "serialport": "^1.7.1",
-    "time": "^0.11.3"
+    "time": "^0.11.3",
+    "usb": "^1.0.6"
   }
 }

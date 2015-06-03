@@ -1,9 +1,6 @@
 /**
  * Created by Adam on 5/13/15.
- * TODO: List ports and parse through them for usb stick and sensor
- * TODO: play usb files instead of local ones
  */
-
 
 var   omx = require('omxdirector')
     , time = require('time')
@@ -19,12 +16,13 @@ var   omx = require('omxdirector')
 
 var port = require("serialport");
 var SerialPort = port.SerialPort;
-//var serialPort = new SerialPort("/dev/ttyUSB0", { //pi version
-//    baudrate: 57600
-//});
+
+var serialPort = new SerialPort("/dev/ttyUSB0", { //pi version
+    baudrate: 57600
+});
 
 function clearScreen(){
-    //console.log(" ");
+    console.log(" ");
 }
 function checkUSBReading(){
     //check reading and also whether movie already playing
@@ -60,15 +58,15 @@ function init(){
     triggered = false;
 }
 
-//serialPort.on("open", function () {
+serialPort.on("open", function () {
     //console.log('open');
-//    serialPort.on('data', function(data) {
-//        data = data.toString().split('R')[1];
-//        if(data > minSensorRange){
-//            lastReading = data;
-//        }
-//    });
-//});
+    serialPort.on('data', function(data) {
+        data = data.toString().split('R')[1];
+        if(data > minSensorRange){
+            lastReading = data;
+        }
+    });
+});
 
 init();
 

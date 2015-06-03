@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0acb24fa-5e97-4aad-aa8c-ea6eab66f688" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lrgmaster.js" afterPath="$PROJECT_DIR$/lrgmaster.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/links.txt" afterPath="$PROJECT_DIR$/links.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LRGWall.iws" />
@@ -24,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="lrgmaster.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lrgmaster.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lrgmaster.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57191783">
-              <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+            <state vertical-scroll-proportion="-5.2222223">
+              <caret line="25" column="30" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="30" />
               <folding>
                 <element signature="e#0#38#0" expanded="false" />
               </folding>
@@ -36,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="links.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="links.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/links.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="81" selection-start-line="2" selection-start-column="81" selection-end-line="2" selection-end-column="81" />
+            <state vertical-scroll-proportion="0.016611295">
+              <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -86,8 +86,8 @@
         <option value="$PROJECT_DIR$/lrgslave.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/links.txt" />
         <option value="$PROJECT_DIR$/lrgmaster.js" />
+        <option value="$PROJECT_DIR$/links.txt" />
       </list>
     </option>
   </component>
@@ -218,12 +218,6 @@
       <created>1431534997155</created>
       <option name="number" value="Default" />
       <updated>1431534997155</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Updated to callback structure for player">
-      <created>1431541617843</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1431541617843</updated>
     </task>
     <task id="LOCAL-00005" summary="Updated to callback structure for player">
       <created>1431541704550</created>
@@ -513,7 +507,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433309812727</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="retail step 1">
+      <created>1433309880590</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1433309880590</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -692,21 +692,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/links.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="81" selection-start-line="2" selection-start-column="81" selection-end-line="2" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lrgmaster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57191783">
-          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+        <state vertical-scroll-proportion="-5.2222223">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="30" />
           <folding>
             <element signature="e#0#38#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/links.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.016611295">
+          <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>

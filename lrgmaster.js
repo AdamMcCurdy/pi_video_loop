@@ -59,7 +59,7 @@ function playMovie(filename){
 }
 
 function init(){
-    playMovie("attract.mp4");
+    omx.play("attract.mp4", {loop:true});
     triggered = false;
 }
 

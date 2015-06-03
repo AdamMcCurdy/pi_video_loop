@@ -14,13 +14,14 @@ var   omx = require('omxdirector')
     , triggeredTime = 0
     , moviePlaying = 'trigger.mp4'
     , minSensorRange = 501
-    , maxSensorRange = 3000;
+    , maxSensorRange = 3000
+    , usbPath = "../../../media/usb0/";
 
 var port = require("serialport");
 var SerialPort = port.SerialPort;
-var serialPort = new SerialPort("/dev/ttyUSB0", { //pi version
-    baudrate: 57600
-});
+//var serialPort = new SerialPort("/dev/ttyUSB0", { //pi version
+//    baudrate: 57600
+//});
 
 function clearScreen(){
     //console.log(" ");
@@ -47,10 +48,10 @@ function checkUSBReading(){
 
 
 function playMovie(filename){
-    //omx.stop();
-    //setTimeout(function(){
-    //    omx.play(filename, {loop: true});
-    //}, 750);
+    omx.stop();
+    setTimeout(function(){
+        omx.play(usbPath + filename, {loop: true});
+    }, 750);
     moviePlaying = filename;
 }
 
@@ -59,17 +60,15 @@ function init(){
     triggered = false;
 }
 
-serialPort.on("open", function () {
+//serialPort.on("open", function () {
     //console.log('open');
-    serialPort.on('data', function(data) {
-        data = data.toString().split('R')[1];
-        if(data > minSensorRange){
-            lastReading = data;
-        }
-    });
-});
-
-console.log(usb.getDeviceList()[0].deviceDescriptor.iManufacturer);
+//    serialPort.on('data', function(data) {
+//        data = data.toString().split('R')[1];
+//        if(data > minSensorRange){
+//            lastReading = data;
+//        }
+//    });
+//});
 
 init();
 

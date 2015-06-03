@@ -8,7 +8,7 @@ var omx = require('omxdirector').enableNativeLoop()
     , triggered = false
     , triggeredTime = 0
     , moviePlaying = 'trigger.mp4'
-    , sensorMin = 299
+    , minSensorRange = 501
     , maxSensorRange = 3000;
 
 var SerialPort = require("serialport").SerialPort;
@@ -20,8 +20,7 @@ setInterval(checkUSBReading, 500);
 
 function checkUSBReading(){
     //check reading and also whether movie already playing
-    if(lastReading < maxSensorRange && triggered == false){
-
+    if(lastReading < maxSensorRange && lastReading > minSensorRange && triggered == false){
         //checking to see if current time is under 30 seconds
         if(time.time() - triggeredTime > timeToTrigger){
             playMovie("trigger.mp4");
@@ -48,13 +47,12 @@ function checkUSBReading(){
 
 function playMovie(filename){
     omx.stop();
-    omx.on('stop', function(){
-        omx.play(filename, {loop:true});
-    })
-    //setTimeout(function(){
-    //
-    //    omx.play(filename, {loop: true});
-    //}, 500);
+    //omx.on('stop', function(){
+    //    omx.play(filename, {loop:true});
+    //})
+    setTimeout(function(){
+        omx.play(filename, {loop: true});
+    }, 500);
 
     moviePlaying = filename;
 }
@@ -62,14 +60,13 @@ function playMovie(filename){
 function init(){
     playMovie("attract.mp4");
     triggered = false;
-
 }
 
 serialPort.on("open", function () {
     //console.log('open');
     serialPort.on('data', function(data) {
         data = data.toString().split('R')[1];
-        if(data > sensorMin){
+        if(data > minSensorRange){
             lastReading = data;
         }
     });

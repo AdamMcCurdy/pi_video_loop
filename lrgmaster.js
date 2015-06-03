@@ -8,7 +8,7 @@ var omx = require('omxdirector').enableNativeLoop()
     , triggered = false
     , triggeredTime = 0
     , moviePlaying = 'trigger.mp4'
-    , minSensorRange = 501
+    , minSensorRange = 299
     , maxSensorRange = 3000;
 
 var SerialPort = require("serialport").SerialPort;

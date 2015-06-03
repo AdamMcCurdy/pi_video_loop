@@ -69,7 +69,7 @@ serialPort.on("open", function () {
     });
 });
 
-console.log(usb.getDeviceList()[0].deviceAddress);
+console.log(usb.getDeviceList()[0].deviceDescriptor.iManufacturer);
 
 init();
 

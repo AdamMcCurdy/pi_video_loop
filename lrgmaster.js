@@ -23,7 +23,7 @@ var serialPort = new SerialPort("/dev/ttyUSB0", { //pi version
 });
 
 function clearScreen(){
-    console.log(" ");
+    //console.log(" ");
 }
 function checkUSBReading(){
     //check reading and also whether movie already playing
@@ -47,10 +47,10 @@ function checkUSBReading(){
 
 
 function playMovie(filename){
-    omx.stop();
-    setTimeout(function(){
-        omx.play(filename, {loop: true});
-    }, 750);
+    //omx.stop();
+    //setTimeout(function(){
+    //    omx.play(filename, {loop: true});
+    //}, 750);
     moviePlaying = filename;
 }
 

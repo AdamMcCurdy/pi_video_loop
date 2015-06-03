@@ -16,7 +16,7 @@ var omx = require('omxdirector')
 
 var SerialPort = require("serialport").SerialPort;
 //var serialPort = new SerialPort("/dev/tty.usbserial-MBY0W12V", { // mac version
-var serialPort = new SerialPort("/dev/ttyUSB0", { //pi version
+var serialPort = new SerialPort("/dev/ttyUSB1", { //pi version
     baudrate: 57600
 });
 

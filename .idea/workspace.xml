@@ -27,8 +27,8 @@
       <file leaf-file-name="lrgmaster.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lrgmaster.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.017123288">
-              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.57191783">
+              <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
               <folding>
                 <element signature="e#0#38#0" expanded="false" />
               </folding>
@@ -218,12 +218,6 @@
       <created>1431534997155</created>
       <option name="number" value="Default" />
       <updated>1431534997155</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Updated to callback structure for player">
-      <created>1431541610570</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1431541610570</updated>
     </task>
     <task id="LOCAL-00004" summary="Updated to callback structure for player">
       <created>1431541617843</created>
@@ -513,7 +507,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433309744714</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="retail step 1">
+      <created>1433309812727</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1433309812727</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -702,8 +702,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lrgmaster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.017123288">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.57191783">
+          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
           <folding>
             <element signature="e#0#38#0" expanded="false" />
           </folding>

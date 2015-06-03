@@ -45,15 +45,13 @@ function checkUSBReading(){
     }
 }
 
-omx.on('stop', function(){
-    omx.play(moviePlaying, {loop:true});
-})
 
 function playMovie(filename){
     omx.stop();
-    //setTimeout(function(){
-    //    omx.play(filename, {loop: true});
-    //}, 500);
+
+    setTimeout(function(){
+        omx.play(filename, {loop: true});
+    }, 750);
 
     moviePlaying = filename;
 }

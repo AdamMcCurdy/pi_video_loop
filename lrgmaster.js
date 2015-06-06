@@ -48,8 +48,16 @@ function checkUSBReading(){
 function playMovie(filename){
     omx.stop();
     setTimeout(function(){
-        omx.play(usbPath + filename, {loop: true});
+        if (filename != 'attract.mp4') {
+            omx.play(usbPath + filename, {loop: false});
+            setTimeout(function () {
+                omx.play(usbPath + 'attract.mp4', {loop: true});
+            }, 4)
+        } else {
+            omx.play(usbPath + filename, {loop: true});
+        }
     }, 750);
+
     moviePlaying = filename;
 }
 

@@ -14,12 +14,12 @@ var   omx = require('omxdirector')
     , maxSensorRange = 3000
     , usbPath = "../../../media/usb0/";
 
-//var port = require("serialport");
-//var SerialPort = port.SerialPort;
-//
-//var serialPort = new SerialPort("/dev/ttyUSB0", { //pi version
-//    baudrate: 57600
-//});
+var port = require("serialport");
+var SerialPort = port.SerialPort;
+
+var serialPort = new SerialPort("/dev/ttyUSB0", { //pi version
+    baudrate: 57600
+});
 
 function clearScreen(){
     console.log(" ");
@@ -74,18 +74,18 @@ function init(){
 function fakeUSBReading() {
     lastReading = (Math.random() * 5000);
 }
-//serialPort.on("open", function () {
-//    //console.log('open');
-//    serialPort.on('data', function(data) {
-//        data = data.toString().split('R')[1];
-//        if(data > minSensorRange){
-//            lastReading = data;
-//        }
-//    });
-//});
+serialPort.on("open", function () {
+    //console.log('open');
+    serialPort.on('data', function(data) {
+        data = data.toString().split('R')[1];
+        if(data > minSensorRange){
+            lastReading = data;
+        }
+    });
+});
 
 init();
 
-setInterval(fakeUSBReading, 400);
+//setInterval(fakeUSBReading, 400);
 setInterval(checkUSBReading, 500);
 setInterval(clearScreen, 10);

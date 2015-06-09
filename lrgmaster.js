@@ -14,12 +14,12 @@ var   omx = require('omxdirector')
     , maxSensorRange = 3000
     , usbPath = "../../../media/usb0/";
 
-var port = require("serialport");
-var SerialPort = port.SerialPort;
-
-var serialPort = new SerialPort("/dev/ttyUSB0", { //pi version
-    baudrate: 57600
-});
+//var port = require("serialport");
+//var SerialPort = port.SerialPort;
+//
+//var serialPort = new SerialPort("/dev/ttyUSB0", { //pi version
+//    baudrate: 57600
+//});
 
 function clearScreen(){
     console.log(" ");
@@ -51,8 +51,12 @@ function playMovie(filename){
         if (filename != 'attract.mp4') {
             omx.play(usbPath + filename, {loop: false});
             setTimeout(function () {
+                omx.stop();
+                setTimeout(function(){
+                    omx.play(usbPath + 'trigger.mp4', {loop:false});
+                }, 750);
                 omx.play(usbPath + 'attract.mp4', {loop: true});
-            }, 4)
+            }, 4000);
         } else {
             omx.play(usbPath + filename, {loop: true});
         }
@@ -66,17 +70,21 @@ function init(){
     triggered = false;
 }
 
-serialPort.on("open", function () {
-    //console.log('open');
-    serialPort.on('data', function(data) {
-        data = data.toString().split('R')[1];
-        if(data > minSensorRange){
-            lastReading = data;
-        }
-    });
-});
+function fakeUSBReading() {
+    lastReading = (Math.random() * 5000);
+}
+//serialPort.on("open", function () {
+//    //console.log('open');
+//    serialPort.on('data', function(data) {
+//        data = data.toString().split('R')[1];
+//        if(data > minSensorRange){
+//            lastReading = data;
+//        }
+//    });
+//});
 
 init();
 
+setInterval(fakeUSBReading, 400);
 setInterval(checkUSBReading, 500);
 setInterval(clearScreen, 10);

@@ -66,7 +66,7 @@ function playMovie(filename){
 }
 
 function init(){
-    omx.play("attract.mp4", {loop:true});
+    omx.play(usbPath + "attract.mp4", {loop:true});
     triggered = false;
 }
 

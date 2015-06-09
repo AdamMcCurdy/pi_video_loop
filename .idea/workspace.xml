@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0acb24fa-5e97-4aad-aa8c-ea6eab66f688" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lrgmaster.js" afterPath="$PROJECT_DIR$/lrgmaster.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LRGWall.iws" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="lrgmaster.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lrgmaster.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.34551495">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="21" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.5016611">
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -187,12 +186,6 @@
       <created>1431534997155</created>
       <option name="number" value="Default" />
       <updated>1431534997155</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Updated to callback structure for player">
-      <created>1431543140283</created>
-      <option name="number" value="00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1431543140283</updated>
     </task>
     <task id="LOCAL-00017" summary="Updated to callback structure for player">
       <created>1431543316307</created>
@@ -482,7 +475,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433883658275</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="retail step 1">
+      <created>1433883902530</created>
+      <option name="number" value="00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1433883902530</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -663,8 +662,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lrgmaster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.34551495">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="21" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.5016611">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
         </state>
       </provider>

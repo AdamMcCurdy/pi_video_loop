@@ -56,6 +56,7 @@ function playMovie(filename){
                     omx.play(usbPath + 'trigger.mp4', {loop:false});
                 }, 750);
                 omx.play(usbPath + 'attract.mp4', {loop: true});
+                triggered = false;
             }, 4000);
         } else {
             omx.play(usbPath + filename, {loop: true});
